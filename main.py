@@ -30,9 +30,8 @@ def main():
     if len(prompt_args) > 0:
         user_prompt = " ".join(prompt_args)
     else:
-        user_prompt = "Why is Boot.dev such a great place to learn backend development? Use one paragraph maximum."
-        # print("Error: no prompt given")
-        # sys.exit(1)
+        print("Error: no prompt given")
+        sys.exit(1)
 
     messages = [
         types.Content(role="user", parts=[types.Part(text=user_prompt)]),
